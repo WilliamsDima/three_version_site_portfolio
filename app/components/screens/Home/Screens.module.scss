@@ -1,0 +1,317 @@
+.screens {
+
+    &-earth {
+
+        /////////////////////////
+        div[class*="main"] {
+            display: block;
+        }
+
+        div[class*="about-me-text"] {
+            opacity: 0;
+            visibility: hidden;
+            transition-duration: .5s;
+        }
+        ////////////////////////
+        div[class*="aboutme"] {
+            div[class*="block-info-planet"] {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        ////////////////////////
+        div[class*="skills"] {
+
+            div[class*="skills-text"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+        }
+        ////////////////////////
+        div[class*="works"] {
+
+            
+            div[class*="Saturn_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0.1) translateY(100%) translateX(600%);
+            }
+
+            div[class*="works_block"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+        }
+    }
+    
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    &-mars {
+        /////////////////////////
+        div[class*="main"] {
+            div[class*="info"]{
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            div[class*="Earth_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1) translateY(150%) translateX(-50%);
+            }
+        }
+        /////////////////////
+        div[class*="aboutme"] {
+            div[class*="Mars_planet-wrap"]{
+                transform: scale(1) translateY(30%) translateX(-150%);
+
+                @media screen and (max-width: 1050px) {
+                    transform: scale(1) translateY(30%) translateX(-50%);
+                }
+            }
+
+            div[class*="about-me-text"] {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: 1s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        /////////////////////
+        div[class*="skills"] {
+            div[class*="Jupiter_planet-wrap"]{
+                opacity: 1;
+                visibility: visible;
+                right: 0;
+                transform: scale(0.5) translateY(5%) translateX(0);
+
+                @media screen and (max-width: 1050px) {
+                    transform: scale(0.5) translateY(-150%) translateX(40%);
+                }
+            }
+
+            div[class*="skills-text"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-delay: 1s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        ////////////////////////
+        div[class*="works"] {
+
+            
+            div[class*="Saturn_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0.1) translateY(100%) translateX(600%);
+            }
+
+            div[class*="works_block"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    &-jupiter {
+
+        // MAIN PAGE //
+        div[class*="main"] {
+            div[class*="info"]{
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            div[class*="Earth_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1) translateY(150%) translateX(-50%);
+            }
+        }
+
+        // ABOUT ME PAGE //
+        div[class*="aboutme"] {
+            div[class*="Mars_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1) translateY(350%) translateX(-250%);
+            }
+
+            div[class*="about-me-text"] {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        
+        // SKILLS PAGE //
+        div[class*="skills"] {
+            div[class*="Jupiter_planet-wrap"]{
+                opacity: 1;
+                visibility: visible;
+                right: 0;
+                transform: scale(1.5) translateY(10%) translateX(-120%);
+
+                @media screen and (max-width: 1050px) {
+                    right: 50%;
+                    transform: scale(1) translateY(20%) translateX(50%);
+                }
+            }
+
+            div[class*="skills-text"] {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: 1s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 1;
+                visibility: visible;
+                z-index: 5;
+                transform: scale(0.7);
+            }
+        }
+
+        ////////////////////////
+        div[class*="works"] {
+
+            div[class*="Saturn_planet-wrap"]{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(0.2) translateY(0%) translateX(0%);
+
+                @media screen and (max-width: 1050px) {
+                    top: 8%;
+                    right: -30%;
+                }
+            }
+
+            div[class*="works_block"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    &-saturn {
+        // MAIN PAGE //
+        div[class*="main"] {
+            div[class*="info"]{
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            div[class*="Earth_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1) translateY(150%) translateX(-50%);
+            }
+        }
+
+        // ABOUT ME PAGE //
+        div[class*="aboutme"] {
+            div[class*="Mars_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1) translateY(350%) translateX(-250%);
+            }
+
+            div[class*="about-me-text"] {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        
+        // SKILLS PAGE //
+        div[class*="skills"] {
+            div[class*="Jupiter_planet-wrap"]{
+                opacity: 0;
+                visibility: hidden;
+                right: 0;
+                transform: scale(1.5) translateY(270%) translateX(-160%);
+            }
+
+            div[class*="skills-text"] {
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+
+            div[class*="block-info-planet"] {
+                z-index: 5;
+                transform: scale(0.7);
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: .5s;
+            }
+        }
+
+        ////////////////////////
+        div[class*="works"] {
+
+            div[class*="Saturn_planet-wrap"]{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1) translateY(15%) translateX(-100%);
+
+                @media screen and (max-width: 1050px) {
+                    transform: scale(1) translateY(15%) translateX(-50%);
+                }
+            }
+
+            div[class*="block-info-planet"] {
+                opacity: 1;
+                visibility: visible;
+                transition-duration: .5s;
+            }
+
+            div[class*="works_block"] {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: 1s;
+            }
+        }
+    }
+}
+
+
