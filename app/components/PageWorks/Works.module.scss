@@ -1,0 +1,137 @@
+.works_list {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 99vw;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #08FDD8;
+        border-radius: 10px;
+    }
+
+
+    .work {
+        margin-right: 2rem;
+        position: relative;
+
+        &:hover {
+            .img-wrapper {
+                opacity: 0; 
+            }
+
+            .info-block {
+                opacity: 1;
+            }
+        }
+
+        .img-wrapper {
+
+            width: 400px;
+            opacity: 1;
+            transition: all .2s linear;
+            position: relative;
+            z-index: 10;
+
+            &.app {
+                width: 240px;
+
+                span {
+                    width: 100% !important;
+                    height: 240px !important;
+                }
+            }
+
+            span {
+                width: 100% !important;
+                height: 206px !important;
+
+                span {
+                    height: 0 !important;
+                }
+
+                .img {
+                    width: 100% !important;
+                    border-radius: 10px;
+                    height: initial !important;
+                    min-width: initial !important;
+                    max-width: initial !important;
+                    min-height: initial !important;
+                    max-height: initial !important;
+                    margin: initial !important;
+                }
+            }
+        }
+
+
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 20px;
+            color: #08FDD8;
+            font-weight: 700;
+            white-space: break-spaces;
+            text-align: center;
+        }
+
+        .info-block {
+            transition: all .2s linear;
+            position: absolute;
+            white-space: nowrap;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            opacity: 0;
+            transition: all .2s linear;
+
+            .date {
+                color: #ccc;
+                margin-bottom: 1rem;
+            }
+
+            .link {
+                text-align: center;
+                color: #08FDD8;
+                cursor: pointer;
+            }
+
+            .increase-btn {
+                margin-top: 1rem;
+                cursor: pointer;
+
+                svg path {
+                    transition: all .2s linear;
+                    fill: #fff
+                }
+
+                &:hover {
+                    svg path {
+                        fill: #08FDD8
+                    }
+                }
+            }
+
+            .stek-block {
+                display: flex;
+                margin-bottom: 1rem;
+                .stek {
+                    margin-right: 1rem;
+                }
+            }
+
+        }
+    }
+}

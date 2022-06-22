@@ -1,0 +1,54 @@
+.works {
+    display: block;
+
+    .works_block {
+        display: block;
+        position: absolute;
+        top: 50%;
+        z-index: 4;
+        transform: translateY(-50%);
+        overflow-y: scroll;
+        height: 100%;
+
+        transition: all 1.5s ease-in-out;
+
+        @media screen and (max-width: 1050px) {
+            overflow: scroll;
+            height: 100%;
+        }
+
+        .works_item {
+            
+            margin-top: 2rem;
+            padding-left: 2rem;
+
+            
+            &:first-child {
+                margin-top: 3rem;
+            }
+
+            &:last-child {
+                margin-bottom: 3rem;
+            }
+
+            @media screen and (max-width: 1050px) {
+                padding-left: 1rem;
+
+                &:last-child {
+                    margin-bottom: 10rem;
+                }
+            }
+
+
+            h2 {
+                font-size: 3rem;
+                font-style: italic;
+                margin-bottom: 2rem;
+
+                @media screen and (max-width: 1050px) {
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.mobile-menu {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100px;
+    margin-left: -2rem;
+
+    // earth', 'mars', 'jupiter', 'saturn
+
+    @media screen and (max-width: 1050px) {
+
+        display: flex;
+    }
+
+    &.earth {
+        div[class*="Earth_planet-wrap"] {
+            transform: scale(0.2);
+        }
+    }
+
+    &.mars {
+        div[class*="Mars_planet-wrap"] {
+            transform: scale(0.2);
+        }
+    }
+
+    &.jupiter {
+        div[class*="Jupiter_planet-wrap"] {
+            transform: scale(0.2);
+        }
+    }
+
+    
+    &.saturn {
+        div[class*="Saturn_planet-wrap"] {
+            transform: scale(0.2);
+        }
+    }
+
+    div[class*="planet-wrap"] {
+        position: initial;
+        transform: scale(0.15);
+        opacity: 1;
+        visibility: visible;
+        max-width: 60px;
+        
+        div[class*="shadow"] {
+            display: none;
+        }
+
+        div[class*="dark"] {
+            background: initial;
+        }
+    }
+
+    div[class*="block-info"] {
+        display: none;
+    }
+
+    
+}

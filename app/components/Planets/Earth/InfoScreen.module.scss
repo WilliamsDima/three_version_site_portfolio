@@ -1,0 +1,98 @@
+.block-info-screen {
+    position: absolute;
+    top: 0;
+    right: -35px;
+    display: flex;
+    justify-content: end;
+    z-index: 6;
+    transition:cubic-bezier(0.785, 0.135, 0.15, 0.86) all 2s;
+
+    @media screen and (max-width: 1050px) {
+        top: initial;
+        bottom: 0;
+        right: initial;
+        left: 0;
+    }
+
+    .btn-show-text { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid red;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 800;
+        color: red;
+        cursor: pointer;
+        transition: all .2s linear;
+
+        &:hover {
+            border-color: #08FDD8;
+            color: #08FDD8;
+        }
+    }  
+
+    .text-info {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -211px;
+        width: 230px;
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid #08FDD8;
+        color: #ccc;
+        line-height: 1.5;
+
+        animation: showText .2s linear;
+        animation-iteration-count: 1;
+    }
+
+    &.show {
+        
+        animation: hiddenText 2s linear;
+        animation-iteration-count: 1;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        opacity: 1;
+
+        @keyframes hiddenText {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .btn-show-text {
+            opacity: 0;
+
+
+            @keyframes showText {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .text-info {
+            display: block;
+            opacity: 1;
+                
+            @keyframes showText {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

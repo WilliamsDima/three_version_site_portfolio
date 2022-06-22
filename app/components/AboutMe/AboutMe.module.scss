@@ -1,0 +1,64 @@
+.aboutme {
+
+    .about-me-text {
+        position: absolute;
+        top: 50%;
+        left: 7rem;
+        z-index: 5;
+        opacity: 1;
+        visibility: visible;
+        width: 50%;
+        transition: all 1.5s ease-in-out;
+        transform: translate(0%, -50%);
+
+
+        @media screen and (max-width: 1050px) {
+          display: block;
+          margin-top: 0%;
+          left: initial;
+          overflow: scroll;
+          height: 100%;
+          width: 100%;
+        }
+        
+        .link-add-team {
+            color: #08FDD8;
+            cursor: pointer;
+
+            
+        @media screen and (max-width: 1050px) {
+          padding-left: 1rem;
+        }
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .social {
+          margin-top: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @media screen and (max-width: 1050px) {
+            padding-bottom: 10rem;
+          }
+  
+          a {
+              margin-right: 2rem;
+  
+              svg {
+                  width: 1.8rem; 
+              }
+  
+              &:last-child {
+                  margin-right: 0rem;
+                  svg {
+                      width: 12px;
+                  }
+              }
+          }
+      }
+    }
+}
